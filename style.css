@@ -1,0 +1,42 @@
+body {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 10% 80% 10%;
+  background: rgb(177, 174, 249);
+}
+
+header {
+  grid-column: 2;
+  background: rgb(79, 45, 160);
+}
+
+
+main {
+  grid-column: 2;
+  grid-row: 2;
+  background: rgb(117, 104, 199);
+}
+
+footer {
+  grid-row: 3;
+  grid-column: 2;
+  background: rgb(105, 61, 216);
+}
+
+h1, h3, p {
+  text-align: center;
+  color: rgb(177, 174, 249);
+}
+
+p {
+  font-style: italic;
+}
+
+input {
+  width: 40%;
+  margin: 4%;
+}
+
+.hidden {
+  display: none;
+}
