@@ -1,6 +1,6 @@
 # Book-E Front-End
 
-This repo contains a client-side jQuery-based application that will connect to your local API we've built during class. If you haven't kept up in-class with building the Express API, don't worry-- see the setup instructions below.
+This repo contains a client-side jQuery-based application that will connect to your [local API we've built during class](https://git.generalassemb.ly/ga-wdi-exercises/book-e-backend). If you haven't kept up in-class with building the Express API, don't worry-- see the setup instructions below.
 
 ## Set up
 
