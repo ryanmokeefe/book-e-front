@@ -11,16 +11,26 @@ function handlePost (event) {
   const bookmarkTitle = $('.post input[name="title"]').val()
   const bookmarkUrl = $('.post input[name="url"]').val()
   // Use $.ajax to make a POST request here
+  // uncomment the console.log below, and use the console and element inspector to figure out how to
+  // target the element you need using the jQuery function ($)
+  // console.log(event.target)
+}
+
+function handleDelete (event) {
+  // Use $.ajax to make a DELETE request here
+  // uncomment the console.log below, and use the console and element inspector to figure out how to
+  // target the element you need using the jQuery function ($)
+  // console.log(event.target)
 }
 
 function handleUpdate (event) {
   // Use $.ajax to make a PUT request here
   // itemUnderEdit will contain the original values of the item being edited
+  // uncomment the console.log below, and use the console and element inspector to figure out how to
+  // target the element you need using the jQuery function ($)
+  // console.log(event.target)
 }
 
-function handleDelete (event) {
-  // Use $.ajax to make a DELETE request here
-}
 
 function loadData () {
   $('ul').html('')
