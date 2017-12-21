@@ -6,7 +6,7 @@ This repo contains a client-side jQuery-based application that will connect to y
 
 1. Clone down this repository and open `index.html` in your browser.
 2. In the directory for `book-e-backend`, check out the `solution` branch and run `nodemon`.
-3. Make sure you have `mongod` running, and run `node db/seed.js` in `book-e-backend` to reset & seed your database.
+3. Make sure you have `mongod` running, and run `node db/seed.js` in `book-e-backend/` to reset & seed your database.
 
 ## Instructions
 
