@@ -31,11 +31,13 @@ function handleUpdate (event) {
   // console.log(event.target)
 }
 
+// NOTE: you will NOT need to alter any code below this line
 
 function loadData () {
   $('ul').html('')
   let data = $.getJSON(serverUrl).then(response => {
-    // Take data in db and create a tags and 2 buttons for deletion and showing the edit/update form
+    // Take data in db and for each entry, create a tags and 2 buttons: one for deletion and one for
+    // showing the edit/update form
     response.forEach(bookmark => {
       const listItemFeatLink = $(`<li><a href="${bookmark.url}">${bookmark.title}</a></li>`)
       const updateLink = $(`<button class="update" data-title="${bookmark.title}"> Update </button>`)
