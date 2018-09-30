@@ -6,29 +6,64 @@ $('form.post').submit(handlePost)
 $('form.update').submit(handleUpdate)
 $(document).ready(loadData)
 
+      // function handlePost (event) {
+      //   event.preventDefault()
+      //   const bookmarkTitle = $('.post input[name="title"]').val()
+      //   const bookmarkUrl = $('.post input[name="url"]').val()
+      //   // Use $.ajax to make a POST request here
+
+      //   // uncomment the console.log below, and use the console and element inspector to figure out how to
+      //   console.log(event.target)
+      //   // target the element you need using the jQuery function ($)
+      //   // console.log(event.target)
+      // }
 function handlePost (event) {
   event.preventDefault()
   const bookmarkTitle = $('.post input[name="title"]').val()
   const bookmarkUrl = $('.post input[name="url"]').val()
-  // Use $.ajax to make a POST request here
-  // uncomment the console.log below, and use the console and element inspector to figure out how to
-  // target the element you need using the jQuery function ($)
-  // console.log(event.target)
+  console.log(event.target)
+  
+  const newBookmark = {
+    title: bookmarkTitle,
+    url: bookmarkUrl
+  }
+
+  const requestContent = {
+    type: 'POST',
+    dataType: 'json',
+    url: serverUrl,
+    data: newBookmark
+  }
+
+  $.ajax(requestContent)
+    .then(newData => console.log(newData))
+    .then(loadData)
 }
 
 function handleDelete (event) {
   // Use $.ajax to make a DELETE request here
+  let title = $(event.target).attr('data-title')
   // uncomment the console.log below, and use the console and element inspector to figure out how to
   // target the element you need using the jQuery function ($)
+  const deleteRequestContent = {
+    url: serverUrl + title,
+    type: 'DELETE',
+    dataType: 'json'
+  }
+  $.ajax(deleteRequestContent)
+    .then(loadData)
+    .fail(error => console.log(error))
+
   // console.log(event.target)
 }
 
 function handleUpdate (event) {
   // Use $.ajax to make a PUT request here
+  
   // itemUnderEdit will contain the original values of the item being edited
   // uncomment the console.log below, and use the console and element inspector to figure out how to
   // target the element you need using the jQuery function ($)
-  // console.log(event.target)
+  console.log(event.target)
 }
 
 // NOTE: you will NOT need to alter any code below this line
